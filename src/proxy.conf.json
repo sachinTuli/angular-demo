@@ -1,0 +1,8 @@
+{
+    "/api": {
+      "target": "https://chatbot.ecommunicate.co.za/",
+      "secure": false
+     
+    },
+    "changeOrigin": true
+  }

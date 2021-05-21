@@ -1,0 +1,37 @@
+<div class="card p-2 mb-2 mt-2">
+    <div class="media align-items-center">
+      <div class="avatar-sm mr-3">
+        <div class="avatar-title bg-soft-primary text-primary rounded font-size-20">
+            <i class="fa fa-file"></i>
+        </div>
+      </div>
+      <div class="media-body">
+        <div class="text-left">
+          <h5 class="font-size-14 mb-1">{{ "admin.zip" }}</h5>
+          <p class="text-muted font-size-13 mb-0">{{ "12.05 MB" }}</p>
+        </div>
+      </div>
+
+      <div class="ml-4">
+        <ul class="list-inline mb-0 font-size-20">
+          <li class="list-inline-item">
+            <a href="#" class="text-muted">
+                <i class="fa fa-download"></i>
+            </a>
+          </li>
+          <li class="list-inline-item dropdown" ngbDropdown>
+            <a class="dropdown-toggle text-muted" href="#" ngbDropdownToggle role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-ellipsis-v"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu>
+              <a class="dropdown-item" href="#">{{'chat.messages.filedropdown.share' | translate}}
+                <i class="ri-share-line float-right text-muted"></i></a>
+              <a class="dropdown-item" href="#">{{'chat.messages.filedropdown.delete' | translate}}
+                <i class="ri-delete-bin-line float-right text-muted"></i></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>

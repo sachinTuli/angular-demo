@@ -1,0 +1,7 @@
+.chat_button {
+    max-width: 300px;
+}
+
+.chat_button li {
+    display: inline-block;
+}

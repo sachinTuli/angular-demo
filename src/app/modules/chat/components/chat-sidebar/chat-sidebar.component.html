@@ -1,0 +1,15 @@
+<div class="side-menu">
+    <div class="logo" (click)="minimizeSidebar()"><img src="../../assets/img/chat/logo.svg" alt=""></div>
+    <div class="links">
+        <a class="" [ngClass]="{'active': tab == 1}" (click)="activateTabs(1)"  ><i class="fa fa-user-o" aria-hidden="true"></i></a>
+        <a class="" [ngClass]="{'active': tab == 2}" (click)="activateTabs(2)" ><i class="fa fa-commenting-o" aria-hidden="true"></i></a>
+        <a class="" [ngClass]="{'active': tab == 3}"  (click)="activateTabs(3)"><i class="fa fa-users" aria-hidden="true"></i></a>
+        <a class="" [ngClass]="{'active': tab == 4}"  (click)="activateTabs(4)"><i class="fa fa-user-plus" aria-hidden="true"></i></a>
+        <a class="" [ngClass]="{'active': tab == 5}"  (click)="activateTabs(5)"><i class="fa fa-cog" aria-hidden="true"></i></a>
+    </div>
+    <div class="bottom">
+        <a ><i class="fa fa-globe" aria-hidden="true"></i></a>
+        <!-- <a ><i class="fa fa-sun-o" aria-hidden="true"></i></a> -->
+        <a (click)="activateTabs(1)" ><img src="../../assets/img/chat/avatar-1.jpg" alt=""></a>
+    </div>
+</div>

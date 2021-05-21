@@ -1,0 +1,16 @@
+
+<div class="wrapper">
+    <div class="main-panel">
+        <div class="chat-main-container">
+            <app-chat-sidebar [tab]="tab" (activeTab)="activateTab($event)"></app-chat-sidebar>
+            <app-profile *ngIf="tab == 1"></app-profile>
+            <app-chat *ngIf="tab == 2"></app-chat>
+            <app-groups *ngIf="tab == 3"></app-groups>
+            <app-contacts *ngIf="tab == 4"></app-contacts>
+            <app-settings *ngIf="tab == 5"></app-settings>
+            <div class="chating-box bg-dark">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>

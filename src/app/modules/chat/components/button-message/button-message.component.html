@@ -1,0 +1,8 @@
+<p class="text-dark" *ngIf="message.type == type.INCOMING"  [innerHTML]="message.text"></p>
+
+<ul class="chat_button" *ngIf="message.type == type.OUTGOING">
+    <p class="text-dark">Please click on a button: </p>
+    <li class="mr-1" *ngFor="let item of message.buttons let i = index;" >
+        <button mat-raised-button class="btn btn-primary btn-round">{{ item.payload }}</button>
+    </li>
+</ul>

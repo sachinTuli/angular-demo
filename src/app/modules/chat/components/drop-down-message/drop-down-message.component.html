@@ -1,0 +1,21 @@
+<p class="text-dark" *ngIf="message.type == type.INCOMING"  [innerHTML]="message.text"></p>
+
+<div class="dropup" *ngIf="message.type == type.OUTGOING">
+    <p class="text-dark mb-2">Choose a  value from dropdown</p>
+    <button mat-raised-button href="#pablo" class="bg dropdown-toggle btn btn-primary btn-round btn-block" data-toggle="dropdown">Choose a option
+        <b class="caret"></b>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-left">
+        <li class="dropdown-header">Choose a option</li>
+        <li *ngFor="let item of message.dropdown; let i = index;">
+            <a href="#pablo">{{ item.title }}</a>
+        </li>
+    </ul>
+</div>
+
+<!-- <ul class="chat_dropdown" *ngIf="message.type == type.OUTGOING">
+    <p class="text-dark">Please choose a dropdown option.</p>
+    <li *ngFor="let item of message.dropdown; let i = index;" >
+        <p class="text-dark">{{ item.title }}</p>
+    </li>
+</ul> -->

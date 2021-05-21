@@ -1,0 +1,79 @@
+
+    <div class="leftsidebar bg-medium">
+        <div class="header">
+            <label class="bg-dark" for="">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input class="text-light" type="text" placeholder="Search messages or users" [(ngModel)]="searchString" (keyup)="search()">
+            </label>
+        </div>
+        <div class="user-live">
+            <div class="item bg-light active">
+                <span></span>
+                <img src="../../assets/img/chat/avatar-1.jpg " alt="">
+                <p class="text-dark">mimily</p>
+            </div>
+            <div class="item bg-light active">
+                <span></span>
+                <img src="../../assets/img/chat/avatar-2.jpg " alt="">
+                <p class="text-dark">patrick</p>
+            </div>
+            <div class="item bg-light active">
+                <span></span>
+                <label class="bg-soft-light " for="">D</label>
+                <p class="text-dark">dorish</p>
+            </div>
+            <div class="item bg-light active">
+                <span></span>
+                <img src="../../assets/img/chat/avatar-4.jpg " alt="">
+                <p class="text-dark">Emily</p>
+            </div>
+            <div class="item bg-light active">
+                <span></span>
+                <img src="../../assets/img/chat/avatar-1.jpg " alt="">
+                <p class="text-dark">mimily</p>
+            </div>
+            <div class="item bg-light active">
+                <span></span>
+                <img src="../../assets/img/chat/avatar-2.jpg " alt="">
+                <p class="text-dark">patrick</p>
+            </div>
+            <div class="item bg-light active">
+                <span></span>
+                <img src="../../assets/img/chat/avatar-3.jpg " alt="">
+                <p class="text-dark">dorish</p>
+            </div>
+            <div class="item bg-light active">
+                <span></span>
+                <img src="../../assets/img/chat/avatar-4.jpg " alt="">
+                <p class="text-dark">Emily</p>
+            </div>
+        </div>
+        <div class="recent">
+            <h4 class="text-dark">Recent</h4>
+            <div class="recent-container" infinite-scroll
+                [infiniteScrollDistance]="scrollDistance"
+                [infiniteScrollUpDistance]="scrollUpDistance"
+                [infiniteScrollThrottle]="throttle"
+                [scrollWindow]="false"
+                (scrolled)="onScrollDown()"
+                (scrolledUp)="onUp()"
+            >
+                <div class="recent-user-box" *ngFor="let chat of chats" (click)="openMessages(chat);">
+                    <div class="recent-left">
+                        <div class="recent-user-img active">
+                            <img src="../../assets/img/chat/avatar-2.jpg" alt="">
+                            <span></span>
+                        </div>
+                        <div class="recent-user-details">
+                            <p class="text-dark">{{ chat.firstName ? chat.firstName + " " + chat.lastName : chat.sessionId }}</p>
+                            <span class="text-light">Hey! there i'm available</span>
+                        </div>
+                    </div>
+                    <div class="last-seen">
+                        <p class="text-light">{{ chat.lastMessageTime | timeAgo }}</p>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,10 @@
+<p class="text-dark" *ngIf="message.type == type.INCOMING"  [innerHTML]="message.text"></p>
+
+<div class="col-md-12 mr-auto" *ngIf="message.type == type.OUTGOING">
+    <p class="text-dark text-left">Select a date</p>
+    <mat-form-field class="text-dark">
+      <input class="text-dark" matInput [matDatepicker]="picker" placeholder="Choose a date" (click)="picker.open()">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+</div>
